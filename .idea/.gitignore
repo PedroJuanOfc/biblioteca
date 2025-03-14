@@ -1,0 +1,20 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Diretório do IntelliJ
+.idea/
+
+# Arquivos de configuração do IntelliJ
+*.iml
+workspace.xml
+misc.xml
+
+# Diretório de build do Maven
+target/
+
+# Arquivos compilados Java
+*.class
+
+# Logs e arquivos temporários
+*.log
