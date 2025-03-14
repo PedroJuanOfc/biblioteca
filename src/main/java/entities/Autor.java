@@ -3,21 +3,21 @@ package entities;
 import java.time.LocalDate;
 
 public class Autor {
-    private String id;
+    private int id;
     private String nome;
     private LocalDate dataNascimento;
 
-    public Autor(String id, String nome, LocalDate dataNascimento) {
+    public Autor(int id, String nome, LocalDate dataNascimento) {
         this.id = id;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

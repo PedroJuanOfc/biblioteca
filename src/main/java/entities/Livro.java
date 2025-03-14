@@ -33,6 +33,7 @@ public class Livro {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+        this.dataAtualizacao = LocalDate.now();
     }
 
     public Autor getAutor() {
@@ -41,6 +42,7 @@ public class Livro {
 
     public void setAutor(Autor autor) {
         this.autor = autor;
+        this.dataAtualizacao = LocalDate.now();
     }
 
     public boolean isDisponivel() {
