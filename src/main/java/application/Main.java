@@ -18,13 +18,14 @@ public class Main {
             System.out.println("1 - Cadastrar Autor");
             System.out.println("2 - Cadastrar Livro");
             System.out.println("3 - Listar livros disponíveis");
+            System.out.println("4 - Realizar Empréstimo");
             System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
 
             opcao = sc.nextInt();
             sc.nextLine();
 
-            switch (opcao){
+            switch (opcao) {
                 case 1:
                     System.out.print("Digite o ID do autor: ");
                     int idAutorEscolhido = sc.nextInt();
@@ -69,6 +70,25 @@ public class Main {
                     biblioteca.listarLivrosDisponiveis();
                     break;
 
+                case 4:
+                    System.out.println("\n===== Empréstimo de Livro =====");
+
+                    if (biblioteca.naoTemLivrosDisponiveis()) {
+                        System.out.println("Não há livros disponíveis para empréstimo.");
+                        break;
+                    }
+
+                    biblioteca.listarLivrosDisponiveis();
+
+                    System.out.print("Digite o ID do livro que deseja pegar emprestado: ");
+                    String idLivroEmprestimo = sc.nextLine();
+
+                    System.out.print("Digite seu nome: ");
+                    String nomeUsuario = sc.nextLine();
+
+                    biblioteca.realizarEmprestimo(idLivroEmprestimo, nomeUsuario);
+                    break;
+
                 case 0:
                     System.out.println("Volte sempre!");
                     break;
@@ -76,7 +96,7 @@ public class Main {
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
             }
-        } while(opcao != 0);
+        } while (opcao != 0);
 
         sc.close();
     }
